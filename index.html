@@ -1,12 +1,1255 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Page Title</title>
-    <link rel='stylesheet' href='main.css'>
-</head>
-<body>
-    
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Find your next home with Reantly. Explore properties, real estate services, and guides for buying, renting, and selling." name="description"/>
+    <title>
+      Reantly
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+    <link href="./css/responsive.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <!-- Shared SVG symbols keep the UI icons consistent without an icon library. -->
+    <svg aria-hidden="true" class="icon-sprite" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <symbol id="icon-home" viewBox="0 0 24 24">
+          <path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9">
+          </path>
+        </symbol>
+        <symbol id="icon-person" viewBox="0 0 24 24">
+          <circle cx="12" cy="7" r="4">
+          </circle>
+          <path d="M4 21v-3a8 8 0 0 1 16 0v3Z">
+          </path>
+        </symbol>
+        <symbol id="icon-key" viewBox="0 0 24 24">
+          <circle cx="8" cy="8" r="5">
+          </circle>
+          <path d="m12 12 9 9m-5-5 3-3m-1 5 3-3">
+          </path>
+        </symbol>
+        <symbol id="icon-bed" viewBox="0 0 24 24">
+          <path d="M2 21V9m20 12V9M2 17h20M4 13V5h16v8M2 13h20v4H2Z">
+          </path>
+          <path d="M7 9h3m4 0h3">
+          </path>
+        </symbol>
+        <symbol id="icon-bath" viewBox="0 0 24 24">
+          <path d="M3 12h18l-2 7H5ZM6 19v2m12-2v2M6 12V5a3 3 0 0 1 6 0m-2 2h4">
+          </path>
+        </symbol>
+        <symbol id="icon-ruler" viewBox="0 0 24 24">
+          <path d="M4 3v18h17ZM4 8h3m-3 5h6m-6 5h3">
+          </path>
+        </symbol>
+        <symbol id="icon-library" viewBox="0 0 24 24">
+          <path d="M3 4h18v17H3Zm0 5h18M9 4v5m6-5v5m-6 3v6m6-6v6">
+          </path>
+        </symbol>
+        <symbol id="icon-globe" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9">
+          </circle>
+          <ellipse cx="12" cy="12" rx="4" ry="9">
+          </ellipse>
+          <path d="M3 12h18M5 7h14M5 17h14">
+          </path>
+        </symbol>
+        <symbol id="icon-pin" viewBox="0 0 24 24">
+          <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z">
+          </path>
+          <circle cx="12" cy="10" r="2">
+          </circle>
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+          <rect height="16" rx="2" width="20" x="2" y="4">
+          </rect>
+          <path d="m2 6 10 7L22 6">
+          </path>
+        </symbol>
+        <symbol id="icon-arrow" viewBox="0 0 24 24">
+          <path d="M3 12h18m-6-6 6 6-6 6">
+          </path>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24">
+          <path d="m5 12 4 4L19 6">
+          </path>
+        </symbol>
+        <symbol id="icon-chart" viewBox="0 0 24 24">
+          <path d="M5 21V12m7 9V8m7 13V3M2 15l3-3 3 3m1-4 3-3 3 3m1-5 3-3 3 3">
+          </path>
+        </symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24">
+          <rect height="16" rx="2" width="18" x="3" y="5">
+          </rect>
+          <path d="M7 3v4m10-4v4M3 11h18">
+          </path>
+        </symbol>
+        <symbol id="icon-bookmark" viewBox="0 0 24 24">
+          <path d="M6 3h12v18l-6-4-6 4Z">
+          </path>
+        </symbol>
+      </defs>
+    </svg>
+    <!-- Header: contact strip and primary navigation. -->
+    <header>
+      <div class="top-bar">
+        <div class="container">
+          <div class="contact-info">
+            <span>
+              <svg fill="none" viewBox="0 0 24 24">
+                <rect height="14" rx="2" stroke="currentColor" stroke-width="1.8" width="18" x="3" y="5">
+                </rect>
+                <path d="M3 7L10.2 12.2C11.27 12.97 12.73 12.97 13.8 12.2L21 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+                </path>
+              </svg>
+              Info@webmail.com
+            </span>
+            <span>
+              <svg fill="none" viewBox="0 0 40 40">
+                <path d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+                </path>
+              </svg>
+              547 ns tower St. anglo City, USA
+            </span>
+          </div>
+          <div class="social-links">
+            <a aria-label="Facebook" class="facebook" href="https://www.facebook.com/">
+              <svg fill="currentColor" viewBox="0 0 514 514">
+                <path d="M283.122,122.174c0,5.24,0,22.319,0,46.583h83.424l-9.045,74.367h-74.379
+                                                                        c0,114.688,0,268.375,0,268.375h-98.726c0,0,0-151.653,0-268.375h-51.443v-74.367h51.443c0-29.492,0-50.463,0-56.302
+                                                                        c0-27.82-2.096-41.02,9.725-62.578C205.948,28.32,239.308-0.174,297.007,0.512c57.713,0.711,82.04,6.263,82.04,6.263
+                                                                        l-12.501,79.257c0,0-36.853-9.731-54.942-6.263C293.539,83.238,283.122,94.366,283.122,122.174z">
+                </path>
+              </svg>
+            </a>
+            <a aria-label="Twitter" class="twitter" href="https://twitter.com/">
+              <svg fill="currentColor" viewBox="0 0 512 512">
+                <path d="M459.186,151.787c0.203,4.501,0.305,9.023,0.305,13.565
+		              c0,138.542-105.461,298.285-298.274,298.285c-59.209,0-114.322-17.357-160.716-47.104c8.212,0.973,16.546,1.47,25.012,1.47
+		              c49.121,0,94.318-16.759,130.209-44.884c-45.887-0.841-84.596-31.154-97.938-72.804c6.408,1.227,12.968,1.886,19.73,1.886
+		              c9.55,0,18.816-1.287,27.617-3.68c-47.955-9.633-84.1-52.001-84.1-102.795c0-0.446,0-0.882,0.011-1.318
+		              c14.133,7.847,30.294,12.562,47.488,13.109c-28.134-18.796-46.637-50.885-46.637-87.262c0-19.212,5.16-37.218,14.193-52.7
+		              c51.707,63.426,128.941,105.156,216.072,109.536c-1.784-7.675-2.718-15.674-2.718-23.896c0-57.891,46.941-104.832,104.832-104.832
+		              c30.173,0,57.404,12.734,76.525,33.102c23.887-4.694,46.313-13.423,66.569-25.438c-7.827,24.485-24.434,45.025-46.089,58.002
+		              c21.209-2.535,41.426-8.171,60.222-16.505C497.448,118.542,479.666,137.004,459.186,151.787z">
+                </path>
+              </svg>
+            </a>
+            <a aria-label="Instagram" class="instagram" href="https://www.instagram.com/">
+              <svg fill="none" viewBox="1.25 1.25 21.5 21.5">
+                <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                </path>
+                <path d="M12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                </path>
+                <path d="M17.6361 7H17.6477" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                </path>
+              </svg>
+            </a>
+            <a aria-label="YouTube" class="youtube" href="https://www.youtube.com/">
+              <svg fill="currentColor" viewBox="2 2 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.7 5.3c-.2-.7-.7-1.2-1.4-1.4-2.1-.2-4.2-.4-6.3-.3-2.1 0-4.2.1-6.3.3-.6.2-1.2.8-1.4 1.4C2.1 6.9 2 8.4 2 10s.1 3.1.3 4.7c.2.7.7 1.2 1.4 1.4 2.1.2 4.2.4 6.3.3 2.1 0 4.2-.1 6.3-.3.7-.2 1.2-.7 1.4-1.4.2-1.5.3-3.1.3-4.7s-.1-3.1-.3-4.7zM8 13V7l5.2 3L8 13z">
+                </path>
+              </svg>
+            </a>
+            <a aria-label="Pinterest" class="pinterest" href="https://www.pinterest.com/">
+              <svg fill="currentColor" viewBox="-271 273 256 256" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-143,273c-70.7,0-128,57.3-128,128c0,52.4,31.5,97.4,76.6,117.2c-0.4-8.9-0.1-19.7,2.2-29.4c2.5-10.4,16.5-69.7,16.5-69.7
+                                                                        s-4.1-8.2-4.1-20.2c0-19,11-33.1,24.7-33.1c11.6,0,17.3,8.7,17.3,19.2c0,11.7-7.5,29.2-11.3,45.4c-3.2,13.6,6.8,24.6,20.2,24.6
+                                                                        c24.3,0,40.6-31.1,40.6-68c0-28-18.9-49-53.3-49c-38.8,0-63,28.9-63,61.3c0,11.2,3.3,19,8.4,25.1c2.4,2.8,2.7,3.9,1.8,7.1
+                                                                        c-0.6,2.3-2,8-2.6,10.3c-0.9,3.2-3.5,4.4-6.4,3.2c-17.9-7.3-26.2-26.9-26.2-48.9c0-36.4,30.7-80,91.5-80c48.9,0,81,35.4,81,73.3
+                                                                        c0,50.2-27.9,87.7-69.1,87.7c-13.8,0-26.8-7.5-31.3-15.9c0,0-7.4,29.5-9,35.2c-2.7,9.9-8,19.7-12.9,27.4c11.5,3.4,23.7,5.3,36.3,5.3
+                                                                        c70.7,0,128-57.3,128-128C-15,330.3-72.3,273-143,273z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <div class="container">
+          <a aria-label="Reantly home" class="logo" href="#home">
+            <span>
+              <img alt="Reantly Logo" src="./images/logo/reantly.png"/>
+            </span>
+          </a>
+          <!-- A native checkbox controls the mobile menu using CSS only. -->
+          <input aria-controls="primary-navigation" aria-label="Toggle navigation menu" class="menu-checkbox sr-only" id="menu-checkbox" type="checkbox"/>
+          <label aria-hidden="true" class="menu-toggle" for="menu-checkbox">
+            <span>
+            </span>
+            <span>
+            </span>
+            <span>
+            </span>
+          </label>
+          <nav aria-label="Primary navigation" class="nav-links" id="primary-navigation">
+            <a class="active" href="#home">
+              Home
+            </a>
+            <a href="#about">
+              About
+            </a>
+            <a href="#featured">
+              Feature
+            </a>
+            <a href="#projects">
+              Market
+            </a>
+            <a href="#services">
+              Services
+            </a>
+            <a href="#contact">
+              Contact
+            </a>
+            <a href="#contact">
+              Log In
+            </a>
+            <a class="signup-btn" href="#contact">
+              Sign Up
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main-content">
+      <!-- Hero: gray media blocks match the supplied Figma placeholders. -->
+      <section aria-labelledby="hero-title" class="hero" id="home">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <h1 id="hero-title">
+              Find the best Real Estate on your country
+              <span class="title-dot">
+                .
+              </span>
+            </h1>
+            <svg aria-hidden="true" class="hero-doodle" fill="none" viewBox="0 0 200 140">
+              <path d="M12 5c0 64 55 119 100 93 37-21 5-71-19-46-37 40 26 80 94 36m-20-1 21-4-9 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+              </path>
+            </svg>
+            <p>
+              With over 1 million homes for sale available on the website, Renting can match you with a house.
+            </p>
+            <a class="button" href="#contact">
+              Start membership
+              <span aria-hidden="true">
+                ›
+              </span>
+            </a>
+          </div>
+          <div class="hero-media">
+            <div aria-label="House 1 image placeholder" class="media-placeholder hero-image" role="img">
+            </div>
+            <div class="revenue-card">
+              <span class="revenue-icon">
+                <span aria-hidden="true" class="coin">
+                  $
+                </span>
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-chart">
+                  </use>
+                </svg>
+              </span>
+              <strong>
+                $7454.21
+              </strong>
+              <span>
+                Revenue
+              </span>
+            </div>
+            <a class="how-it-works" href="#guides-title">
+              How it works
+              <span aria-hidden="true" class="play-icon">
+                ▶
+              </span>
+            </a>
+          </div>
+          <div aria-label="Preview houses" class="house-selector" role="group">
+            <span class="house-option is-active">
+              House 1
+            </span>
+            <span class="house-option">
+              House 2
+            </span>
+            <span class="house-option">
+              House 3
+            </span>
+            <span aria-hidden="true" class="selector-line">
+            </span>
+            <span class="house-count">
+              1
+              <small>
+                / 3
+              </small>
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- Guides: three equal cards with a highlighted renting guide. -->
+      <section aria-labelledby="guides-title" class="guides section">
+        <div class="container">
+          <div class="section-heading centered">
+            <h2 id="guides-title">
+              Commercial Real Estate
+              <br/>
+              And Office
+            </h2>
+            <p>
+              Work with Renting brokers who help you to get
+              <br class="desktop-break"/>
+              started with smart tools.
+            </p>
+          </div>
+          <div class="guides-grid">
+            <a class="guide-card" href="#contact">
+              <span class="guide-icon">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-person">
+                  </use>
+                </svg>
+              </span>
+              <h3>
+                Buyer Guides
+              </h3>
+              <p>
+                Nurture valuable leads into customers, and turn one time.
+              </p>
+            </a>
+            <a class="guide-card guide-card-highlight" href="#contact">
+              <span class="guide-icon">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-key">
+                  </use>
+                </svg>
+              </span>
+              <h3>
+                Renter Guides
+              </h3>
+              <p>
+                Build brand awareness on the top social media networks.
+              </p>
+            </a>
+            <a class="guide-card" href="#contact">
+              <span class="guide-icon">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-home">
+                  </use>
+                </svg>
+              </span>
+              <h3>
+                Seller Guides
+              </h3>
+              <p>
+                Get professionally-written content that attracts qualified.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- About: offset media composition and a concise list of benefits. -->
+      <section aria-labelledby="about-title" class="about section" id="about">
+        <div class="container split-layout">
+          <div class="about-media">
+            <div aria-label="Residence exterior image placeholder" class="media-placeholder about-image-back" role="img">
+            </div>
+            <div aria-label="Residence interior image placeholder" class="media-placeholder about-image-front" role="img">
+            </div>
+            <div class="rating-badge">
+              <span aria-hidden="true">
+                ★
+              </span>
+              <small>
+                5 Star Rating
+              </small>
+            </div>
+          </div>
+          <div class="section-copy">
+            <h2 id="about-title">
+              Dream Living Spaces
+              <br/>
+              Setting New Build
+            </h2>
+            <p>
+              SeaWire Web is a wireframe kit that has more than 15 popular categories and more than 200 screens.
+            </p>
+            <ul class="benefits-list">
+              <li>
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-home">
+                  </use>
+                </svg>
+                <div>
+                  <h3>
+                    The perfect Residence
+                  </h3>
+                  <p>
+                    Take a deep dive and browse origin neighborhood photos.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-person">
+                  </use>
+                </svg>
+                <div>
+                  <h3>
+                    Global Architect Experts
+                  </h3>
+                  <p>
+                    Take a deep dive and browse origin neighborhood photos.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-globe">
+                  </use>
+                </svg>
+                <div>
+                  <h3>
+                    Built-in a storage capable
+                  </h3>
+                  <p>
+                    Take a deep dive and browse origin neighborhood photos.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="selling-title" class="selling section">
+        <div class="container split-layout">
+          <div class="section-copy">
+            <span class="eyebrow">
+              <svg aria-hidden="true" class="icon">
+                <use href="#icon-home">
+                </use>
+              </svg>
+              About home
+            </span>
+            <h2 id="selling-title">
+              Today Sells Properties
+            </h2>
+            <p>
+              SeaWire Web is a wireframe kit that has more than 15 popular categories and more than 200 screens.
+            </p>
+            <ul class="selling-list">
+              <li>
+                Live Music concert at Newyork
+              </li>
+              <li>
+                Our best boat Tour is just for you
+              </li>
+              <li>
+                Live Music concert at Newyork
+              </li>
+              <li>
+                Our best boat Tour is just for you
+              </li>
+              <li>
+                Live Music concert at Newyork
+              </li>
+            </ul>
+            <div aria-hidden="true" class="mini-houses">
+              <span>
+                House 1
+              </span>
+              <span>
+                House 2
+              </span>
+              <span>
+                House 3
+              </span>
+              <i>
+              </i>
+              <small>
+                1 / 3
+              </small>
+            </div>
+          </div>
+          <div class="selling-gallery">
+            <div aria-label="Property exterior image placeholder" class="media-placeholder" role="img">
+            </div>
+            <div aria-label="Property living room image placeholder" class="media-placeholder" role="img">
+            </div>
+            <div aria-label="Property bedroom image placeholder" class="media-placeholder" role="img">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services: a three-column grid on desktop, one column on phones. -->
+      <section aria-labelledby="services-title" class="services section" id="services">
+        <div class="container">
+          <div class="section-heading centered">
+            <h2 id="services-title">
+              Services provide for you
+            </h2>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              <br class="desktop-break"/>
+              but the majority have suffered alteration.
+            </p>
+          </div>
+          <div class="services-grid">
+            <article class="service-card">
+              <span class="service-icon">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-bed">
+                  </use>
+                </svg>
+              </span>
+              <h3>
+                Bed Rooms
+              </h3>
+              <p>
+                Desktop publishing software like aldus page maker including
+              </p>
+              <a href="#contact">
+                Learn more
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-arrow">
+                  </use>
+                </svg>
+              </a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-bath">
+                  </use>
+                </svg>
+              </span>
+              <h3>
+                Swimming pool
+              </h3>
+              <p>
+                React creative agency amet, consec tetur adipiscing elit.
+              </p>
+              <a href="#contact">
+                Learn more
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-arrow">
+                  </use>
+                </svg>
+              </a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-ruler">
+                  </use>
+                </svg>
+              </span>
+              <h3>
+                Copywriting content
+              </h3>
+              <p>
+                The standard chunk of used since the 1500s is reproduced
+              </p>
+              <a href="#contact">
+                Learn more
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-arrow">
+                  </use>
+                </svg>
+              </a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-home">
+                  </use>
+                </svg>
+              </span>
+              <h3>
+                Smart Home
+              </h3>
+              <p>
+                The standard chunk of used since the 1500s is reproduced
+              </p>
+              <a href="#contact">
+                Learn more
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-arrow">
+                  </use>
+                </svg>
+              </a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-library">
+                  </use>
+                </svg>
+              </span>
+              <h3>
+                Library area
+              </h3>
+              <p>
+                Desktop publishing software like aldus page maker including
+              </p>
+              <a href="#contact">
+                Learn more
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-arrow">
+                  </use>
+                </svg>
+              </a>
+            </article>
+            <article class="service-card">
+              <span class="service-icon">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-person">
+                  </use>
+                </svg>
+              </span>
+              <h3>
+                Responsive Duty
+              </h3>
+              <p>
+                React creative agency amet, consec tetur adipiscing elit.
+              </p>
+              <a href="#contact">
+                Learn more
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-arrow">
+                  </use>
+                </svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Featured properties: static category labels and three preview cards. -->
+      <section aria-labelledby="featured-title" class="featured section" id="featured">
+        <div class="container">
+          <div class="featured-heading">
+            <div class="section-heading">
+              <h2 id="featured-title">
+                Featured Property
+              </h2>
+              <p>
+                Find your suitable house here and stay safe and
+                <br class="desktop-break"/>
+                relaxe with pleasure
+              </p>
+            </div>
+            <div aria-label="Property type" class="property-filters" role="group">
+              <span class="is-active">
+                Appartment
+              </span>
+              <span>
+                Vila
+              </span>
+              <span>
+                Land
+              </span>
+            </div>
+          </div>
+          <div class="properties-grid">
+            <article class="property-card">
+              <div aria-label="The Stokes Appartment image placeholder" class="media-placeholder property-image" role="img">
+              </div>
+              <div class="property-info">
+                <h3>
+                  The Stokes Appartment
+                </h3>
+                <p>
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-pin">
+                    </use>
+                  </svg>
+                  <span>
+                    Cleveland, United States
+                  </span>
+                </p>
+                <strong>
+                  $2,32,120
+                </strong>
+                <a aria-label="Enquire about The Stokes Appartment" href="#contact">
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-arrow">
+                    </use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+            <article class="property-card">
+              <div aria-label="The Stokes Appartment image placeholder" class="media-placeholder property-image" role="img">
+              </div>
+              <div class="property-info">
+                <h3>
+                  The Stokes Appartment
+                </h3>
+                <p>
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-pin">
+                    </use>
+                  </svg>
+                  <span>
+                    Cleveland, United States
+                  </span>
+                </p>
+                <strong>
+                  $2,32,120
+                </strong>
+                <a aria-label="Enquire about The Stokes Appartment" href="#contact">
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-arrow">
+                    </use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+            <article class="property-card">
+              <div aria-label="The Stokes Appartment image placeholder" class="media-placeholder property-image" role="img">
+              </div>
+              <div class="property-info">
+                <h3>
+                  The Stokes Appartment
+                </h3>
+                <p>
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-pin">
+                    </use>
+                  </svg>
+                  <span>
+                    Cleveland, United States
+                  </span>
+                </p>
+                <strong>
+                  $2,32,120
+                </strong>
+                <a aria-label="Enquire about The Stokes Appartment" href="#contact">
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-arrow">
+                    </use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="section-action">
+            <a class="button button-outline" href="#contact">
+              Explore Property
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Full-width neighborhood preview with its floating listing card. -->
+      <section aria-label="Neighborhood property preview" class="neighborhood">
+        <div class="container neighborhood-layout">
+          <div class="listing-preview">
+            <div aria-label="House thumbnail placeholder" class="media-placeholder listing-thumbnail" role="img">
+            </div>
+            <div>
+              <strong>
+                $4,000
+              </strong>
+              <p>
+                242 Metric way
+              </p>
+              <div class="listing-details">
+                <span>
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-bed">
+                    </use>
+                  </svg>
+                  2
+                </span>
+                <span>
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-bath">
+                    </use>
+                  </svg>
+                  2
+                </span>
+                <span>
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-ruler">
+                    </use>
+                  </svg>
+                  500sqf
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="unit-badge">
+            <small>
+              Unit no.
+            </small>
+            <strong>
+              9A
+            </strong>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials: one static review; carousel controls remain disabled. -->
+      <section aria-labelledby="testimonials-title" class="testimonials section">
+        <div class="container">
+          <div class="section-heading centered">
+            <h2 id="testimonials-title">
+              What our customers are saying
+            </h2>
+            <p>
+              We make sure you have a fine distance with the
+              <br class="desktop-break"/>
+              sickness. We make you never lose hope.
+            </p>
+          </div>
+          <div class="testimonial-layout">
+            <button aria-label="Previous testimonial" class="round-button previous" disabled="" title="Only one testimonial is available" type="button">
+              ←
+            </button>
+            <div class="testimonial-portrait">
+              <div aria-label="Customer portrait placeholder" class="media-placeholder" role="img">
+              </div>
+            </div>
+            <div class="testimonial-copy">
+              <span aria-hidden="true" class="quote-mark">
+                “
+              </span>
+              <blockquote>
+                We make sure you have a fine distance with the sickness. We make you never lose hope.
+                <br/>
+                We make sure you have with the sickness.
+              </blockquote>
+              <span aria-label="5 out of 5 stars" class="review-stars">
+                ★★★★★
+              </span>
+              <h3>
+                Yunus Seyhan
+              </h3>
+              <p>
+                Postgraduate Student
+              </p>
+            </div>
+            <button aria-label="Next testimonial" class="round-button next" disabled="" title="Only one testimonial is available" type="button">
+              →
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Projects and subscription strip. Forms are visual previews until a backend is available. -->
+      <section aria-labelledby="projects-title" class="projects section" id="projects">
+        <div class="container">
+          <div class="section-heading centered">
+            <h2 id="projects-title">
+              We build more projects
+              <br/>
+              successful
+            </h2>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>
+                San Francisco, California
+              </h3>
+              <a class="button button-light" href="#contact">
+                See more
+                <span aria-hidden="true">
+                  ›
+                </span>
+              </a>
+            </article>
+            <article class="project-card">
+              <h3>
+                Washington DC
+              </h3>
+              <a class="button button-light" href="#contact">
+                See more
+                <span aria-hidden="true">
+                  ›
+                </span>
+              </a>
+            </article>
+            <article class="project-card">
+              <h3>
+                Chicago
+              </h3>
+              <a class="button button-light" href="#contact">
+                See more
+                <span aria-hidden="true">
+                  ›
+                </span>
+              </a>
+            </article>
+          </div>
+          <form class="subscribe-form">
+            <label class="sr-only" for="project-email">
+              Email address
+            </label>
+            <svg aria-hidden="true" class="icon">
+              <use href="#icon-mail">
+              </use>
+            </svg>
+            <input autocomplete="email" id="project-email" name="email" placeholder="Enter your email here" required="" type="email"/>
+            <button aria-describedby="form-note-1" class="button" disabled="" title="Sending is not available in this static preview" type="submit">
+              Subscribe
+            </button>
+            <p class="form-note" id="form-note-1">
+              Preview only. Sending is not available yet.
+            </p>
+          </form>
+        </div>
+      </section>
+      <section aria-labelledby="blog-title" class="blog section" id="blog">
+        <div class="container">
+          <div class="section-heading centered">
+            <h2 id="blog-title">
+              From our blog
+            </h2>
+            <p>
+              Find your suitable house here and stay safe and
+              <br class="desktop-break"/>
+              relaxe with pleasure
+            </p>
+          </div>
+          <div class="blog-grid">
+            <article class="blog-card">
+              <div aria-label="Rental home image placeholder" class="media-placeholder blog-image" role="img">
+              </div>
+              <div class="blog-content">
+                <h3>
+                  <a href="#contact">
+                    How to rent a home very easily?
+                  </a>
+                </h3>
+                <span class="blog-category">
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-bookmark">
+                    </use>
+                  </svg>
+                  Rentals
+                </span>
+                <p>
+                  How to rent a home very easily in this pandemic situation. You can rent house through using our platform...
+                </p>
+                <div class="blog-meta">
+                  <span>
+                    <svg aria-hidden="true" class="icon">
+                      <use href="#icon-calendar">
+                      </use>
+                    </svg>
+                    3 years ago
+                  </span>
+                  <span>
+                    <svg aria-hidden="true" class="icon">
+                      <use href="#icon-person">
+                      </use>
+                    </svg>
+                    By
+                    <a href="#contact">
+                      Mike Hesson
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div aria-label="Rental home image placeholder" class="media-placeholder blog-image" role="img">
+              </div>
+              <div class="blog-content">
+                <h3>
+                  <a href="#contact">
+                    How to rent a home very easily?
+                  </a>
+                </h3>
+                <span class="blog-category">
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-bookmark">
+                    </use>
+                  </svg>
+                  Rentals
+                </span>
+                <p>
+                  How to rent a home very easily in this pandemic situation. You can rent house through using our platform...
+                </p>
+                <div class="blog-meta">
+                  <span>
+                    <svg aria-hidden="true" class="icon">
+                      <use href="#icon-calendar">
+                      </use>
+                    </svg>
+                    3 years ago
+                  </span>
+                  <span>
+                    <svg aria-hidden="true" class="icon">
+                      <use href="#icon-person">
+                      </use>
+                    </svg>
+                    By
+                    <a href="#contact">
+                      Mike Hesson
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </article>
+            <article class="blog-card">
+              <div aria-label="Rental home image placeholder" class="media-placeholder blog-image" role="img">
+              </div>
+              <div class="blog-content">
+                <h3>
+                  <a href="#contact">
+                    How to rent a home very easily?
+                  </a>
+                </h3>
+                <span class="blog-category">
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-bookmark">
+                    </use>
+                  </svg>
+                  Rentals
+                </span>
+                <p>
+                  How to rent a home very easily in this pandemic situation. You can rent house through using our platform...
+                </p>
+                <div class="blog-meta">
+                  <span>
+                    <svg aria-hidden="true" class="icon">
+                      <use href="#icon-calendar">
+                      </use>
+                    </svg>
+                    3 years ago
+                  </span>
+                  <span>
+                    <svg aria-hidden="true" class="icon">
+                      <use href="#icon-person">
+                      </use>
+                    </svg>
+                    By
+                    <a href="#contact">
+                      Mike Hesson
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="section-action">
+            <a class="button button-outline" href="#contact">
+              Read All
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Contact: labeled fields; sending is disabled in this static preview. -->
+      <section aria-labelledby="contact-title" class="contact section" id="contact">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="contact-eyebrow">
+              Contact with us
+            </span>
+            <h2 id="contact-title">
+              Looking For To Buy A Property?
+            </h2>
+          </div>
+          <div class="contact-layout">
+            <div class="contact-copy">
+              <p>
+                Browse our property listing and find your best and suitable home or house for sale, rent and buying. It’s so easy and fast.
+              </p>
+              <ul class="contact-benefits">
+                <li>
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-check">
+                    </use>
+                  </svg>
+                  Archit ecto beatae vitae dicta sunt
+                </li>
+                <li>
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-check">
+                    </use>
+                  </svg>
+                  Largest global RealEstate market
+                </li>
+                <li>
+                  <svg aria-hidden="true" class="icon">
+                    <use href="#icon-check">
+                    </use>
+                  </svg>
+                  Nor again is there anyone
+                </li>
+              </ul>
+              <div class="contact-media">
+                <div aria-label="Property detail image placeholder" class="media-placeholder contact-image-back" role="img">
+                </div>
+                <div aria-label="Property overview image placeholder" class="media-placeholder contact-image-front" role="img">
+                </div>
+                <span aria-hidden="true" class="contact-decoration">
+                </span>
+              </div>
+            </div>
+            <form class="contact-form">
+              <h3>
+                Contact Us
+              </h3>
+              <label for="contact-name">
+                Name
+              </label>
+              <input autocomplete="name" id="contact-name" maxlength="100" name="name" placeholder="Enter your name" required=""/>
+              <label for="contact-email">
+                Email
+              </label>
+              <input autocomplete="email" id="contact-email" name="email" placeholder="Enter your email" required="" type="email"/>
+              <label for="contact-message">
+                Message
+              </label>
+              <textarea id="contact-message" maxlength="3000" name="message" placeholder="Enter your message" required="" rows="4"></textarea>
+              <button aria-describedby="form-note-2" class="button" disabled="" title="Sending is not available in this static preview" type="submit">
+                Send
+              </button>
+              <p class="form-note" id="form-note-2">
+                Preview only. Sending is not available yet.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer: five columns collapse progressively on smaller screens. -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="footer-logo" href="#home">
+              <svg aria-hidden="true" class="icon">
+                <use href="#icon-home">
+                </use>
+              </svg>
+              Reanty
+              <span>
+                .
+              </span>
+            </a>
+            <p>
+              With over 1 million homes for sale available on the website.
+            </p>
+            <div class="footer-socials">
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/">
+                in
+              </a>
+              <a aria-label="Facebook" href="https://www.facebook.com/">
+                f
+              </a>
+              <a aria-label="Twitter" href="https://twitter.com/">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                  <path d="M459 152c1 139-104 312-298 312-59 0-114-17-160-47 58 7 113-11 155-43-46-1-85-32-98-73 17 3 33 2 47-2-48-10-84-52-84-103 14 8 31 13 48 13-46-31-61-92-33-140 52 63 129 105 216 110-15-65 34-129 102-129 30 0 57 13 77 33 24-5 46-14 67-26-8 25-25 46-46 58 21-2 41-8 60-16-14 21-32 39-53 53Z" fill="currentColor">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <nav aria-label="Company" class="footer-links">
+            <h3>
+              Company
+            </h3>
+            <a href="#about">
+              About
+            </a>
+            <a href="#contact">
+              Careers
+            </a>
+            <a href="#home">
+              Mobile
+            </a>
+            <a href="#blog">
+              Blog
+            </a>
+            <a href="#guides-title">
+              How we work?
+            </a>
+          </nav>
+          <nav aria-label="Contact resources" class="footer-links">
+            <h3>
+              Contact
+            </h3>
+            <a href="#contact">
+              Help/FAQ
+            </a>
+            <a href="#blog">
+              Press
+            </a>
+            <a href="#contact">
+              Affiliates
+            </a>
+            <a href="#featured">
+              Property owners
+            </a>
+            <a href="#projects">
+              Partners
+            </a>
+          </nav>
+          <nav aria-label="More resources" class="footer-links">
+            <h3>
+              More
+            </h3>
+            <a href="#contact">
+              Land fees
+            </a>
+            <a href="#featured">
+              Property
+            </a>
+            <a href="#contact">
+              Law tips
+            </a>
+            <a href="#contact">
+              Nadges
+            </a>
+            <a href="#contact">
+              Privacy
+            </a>
+          </nav>
+          <div class="footer-office">
+            <h3>
+              Head Office
+            </h3>
+            <address>
+              Xilliams Corner Wine © 2017. 1112 A Market St
+              <br/>
+              # Ste B22, Charlottesville, CA 45565
+            </address>
+            <h3>
+              News letter
+            </h3>
+            <form class="footer-subscribe">
+              <label class="sr-only" for="footer-email">
+                Newsletter email address
+              </label>
+              <input autocomplete="email" id="footer-email" name="email" placeholder="Enter your email address" required="" type="email"/>
+              <button aria-describedby="form-note-3" aria-label="Subscribe to newsletter" disabled="" title="Sending is not available in this static preview" type="submit">
+                <svg aria-hidden="true" class="icon">
+                  <use href="#icon-mail">
+                  </use>
+                </svg>
+              </button>
+              <p class="form-note" id="form-note-3">
+                Preview only. Sending is not available yet.
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <a href="mailto:email@gmail.com">
+            email@gmail.com
+          </a>
+          <a href="tel:1234567890">
+            (123) 456-7890
+          </a>
+          <small>
+            © 2021 Aeyman Megha All rights reserved.
+          </small>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

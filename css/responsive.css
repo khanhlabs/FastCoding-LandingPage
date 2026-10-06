@@ -1,0 +1,624 @@
+/* Laptop/tablet: reduce gaps before the desktop grids become too narrow. */
+@media (max-width: 1100px) {
+    .contact-info span {
+        font-size: 11px;
+        letter-spacing: 0;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+    .nav-links a {
+        font-size: 12px;
+    }
+    .logo span img {
+        height: 38px;
+    }
+    .hero-layout {
+        padding-top: 115px;
+        padding-bottom: 170px;
+    }
+    .hero-media {
+        height: 510px;
+    }
+    .hero-doodle {
+        width: 145px;
+        top: 110px;
+        right: -15px;
+    }
+    .split-layout {
+        gap: 65px;
+    }
+    .about-media {
+        height: 390px;
+    }
+    .selling-gallery {
+        height: 380px;
+    }
+    .contact-layout {
+        gap: 50px;
+    }
+    .footer-grid {
+        grid-template-columns: 1.3fr 1fr 1fr 1fr;
+        gap: 30px;
+    }
+    .footer-office {
+        grid-column: span 4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+    }
+    .footer-office h3:nth-of-type(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .footer-office address {
+        margin-bottom: 0;
+    }
+    .footer-subscribe {
+        grid-column: 2;
+        align-self: start;
+    }
+}
+
+/* Tablet: show an expandable menu and two-column service cards. */
+@media (max-width: 900px) {
+    .section {
+        padding: 65px 0;
+    }
+    .nav-bar {
+        height: auto;
+        min-height: 75px;
+    }
+    .nav-bar .container {
+        flex-wrap: wrap;
+        min-height: 75px;
+    }
+    .menu-checkbox,
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 25px;
+        padding: 12px 0 24px;
+    }
+    /* Native checkbox state expands the menu without JavaScript. */
+    .menu-checkbox ~ .nav-links {
+        display: none;
+    }
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+    .nav-links a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    .nav-links .signup-btn {
+        padding: 9px 22px;
+    }
+    .hero-layout {
+        grid-template-columns: 45% 55%;
+        padding-top: 85px;
+    }
+    .hero h1 {
+        font-size: 38px;
+    }
+    .hero-media {
+        width: 55%;
+        height: 490px;
+    }
+    .hero-doodle {
+        display: none;
+    }
+    .hero-copy p {
+        font-size: 13px;
+    }
+    .revenue-card {
+        width: 150px;
+        padding: 20px;
+        left: -20px;
+    }
+    .revenue-card strong {
+        font-size: 18px;
+    }
+    .guides {
+        padding-bottom: 25px;
+    }
+    .guides-grid {
+        gap: 18px;
+    }
+    .guide-card {
+        padding: 28px 18px;
+    }
+    .guide-card h3 {
+        font-size: 15px;
+    }
+    .split-layout {
+        gap: 45px;
+    }
+    .about-media {
+        height: 350px;
+    }
+    .rating-badge {
+        width: 78px;
+        height: 78px;
+        right: -15px;
+    }
+    .benefits-list li {
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .benefits-list h3 {
+        font-size: 14px;
+    }
+    .benefits-list .icon {
+        width: 25px;
+        height: 25px;
+    }
+    .selling-gallery {
+        height: 350px;
+    }
+    .mini-houses span {
+        width: 55px;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .featured-heading {
+        align-items: start;
+    }
+    .property-filters {
+        gap: 18px;
+        font-size: 13px;
+    }
+    .properties-grid, .blog-grid {
+        gap: 18px;
+    }
+    .property-image {
+        height: 290px;
+    }
+    .property-info {
+        width: 90%;
+        padding: 14px 12px;
+    }
+    .property-info h3 {
+        font-size: 12px;
+    }
+    .property-info strong {
+        font-size: 12px;
+    }
+    .property-info a {
+        width: 42px;
+    }
+    .testimonial-layout {
+        gap: 35px;
+        padding-inline: 40px;
+    }
+    .testimonial-portrait {
+        height: 280px;
+    }
+    .previous {
+        left: 0;
+    }
+    .next {
+        right: 0;
+    }
+    .projects-grid {
+        gap: 18px;
+    }
+    .project-card h3 {
+        font-size: 13px;
+    }
+    .blog-image {
+        height: 170px;
+    }
+    .blog-content {
+        padding: 18px 14px;
+    }
+    .contact-layout {
+        gap: 35px;
+    }
+    .contact-form {
+        padding: 28px;
+    }
+    .contact-media {
+        height: 250px;
+    }
+    .footer-bottom {
+        padding-left: 0;
+    }
+}
+
+/* Phones: stack content in reading order and keep touch targets comfortable. */
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 36px);
+    }
+    .top-bar {
+        height: auto;
+        min-height: 40px;
+        padding: 7px 0;
+    }
+    .contact-info {
+        gap: 0;
+    }
+    .contact-info span {
+        font-size: 10px;
+    }
+    .contact-info span + span {
+        display: none;
+    }
+    .social-links {
+        gap: 7px;
+    }
+    .social-links a {
+        width: 22px;
+        height: 26px;
+    }
+    .social-links a svg {
+        width: 15px;
+        height: 15px;
+    }
+    .nav-bar, .nav-bar .container {
+        min-height: 68px;
+    }
+    .logo span img {
+        height: 38px;
+    }
+    .nav-links {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .nav-links a {
+        min-height: 44px;
+        padding: 10px 12px;
+    }
+    .nav-links a::after {
+        display: none;
+    }
+    .nav-links .signup-btn {
+        align-self: start;
+    }
+    .section {
+        padding: 52px 0;
+    }
+    h2 {
+        font-size: 27px;
+        letter-spacing: -0.5px;
+    }
+    .section-heading {
+        margin-bottom: 30px;
+    }
+    .section-heading p {
+        font-size: 13px;
+    }
+    .desktop-break {
+        display: none;
+    }
+    .hero-layout {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0 28px;
+    }
+    .hero-copy {
+        padding-right: 0;
+    }
+    .hero h1 {
+        font-size: clamp(36px, 9.5vw, 48px);
+        max-width: 460px;
+        letter-spacing: -1.3px;
+    }
+    .hero-copy p {
+        margin-top: 22px;
+        max-width: 350px;
+    }
+    .hero-media {
+        position: relative;
+        width: 100%;
+        height: 330px;
+        top: auto;
+        margin-top: 35px;
+        margin-bottom: 58px;
+    }
+    .revenue-card {
+        width: 140px;
+        padding: 18px;
+        left: 14px;
+        bottom: -38px;
+    }
+    .revenue-icon {
+        height: 42px;
+        margin-bottom: 8px;
+    }
+    .revenue-card strong {
+        font-size: 17px;
+    }
+    .revenue-card > span:last-child {
+        font-size: 11px;
+    }
+    .how-it-works {
+        gap: 12px;
+        padding: 12px;
+        min-height: 54px;
+        font-size: 11px;
+    }
+    .house-selector {
+        position: static;
+        align-self: start;
+    }
+    .house-option {
+        width: 65px;
+    }
+    .selector-line {
+        width: 22px;
+        margin-right: 10px;
+    }
+    .house-count {
+        font-size: 16px;
+    }
+    .house-count small {
+        margin-left: 4px;
+    }
+    .guides {
+        padding-bottom: 25px;
+    }
+    .guides-grid, .split-layout, .services-grid, .properties-grid, .projects-grid, .blog-grid, .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .guides-grid {
+        gap: 18px;
+    }
+    .guide-card {
+        padding: 28px 24px;
+    }
+    .guide-card h3 {
+        font-size: 17px;
+    }
+    .guide-icon {
+        margin-bottom: 16px;
+    }
+    .split-layout {
+        gap: 35px;
+    }
+    .about-media {
+        height: 350px;
+        margin-right: 15px;
+    }
+    .rating-badge {
+        right: -15px;
+    }
+    .section-copy > p {
+        max-width: none;
+    }
+    .benefits-list h3 {
+        font-size: 16px;
+    }
+    .benefits-list p {
+        max-width: none;
+    }
+    .benefits-list li {
+        padding: 12px 8px;
+    }
+    .selling {
+        padding-top: 20px;
+    }
+    .selling-gallery {
+        height: 350px;
+    }
+    .mini-houses {
+        margin-top: 28px;
+    }
+    .mini-houses span {
+        width: 65px;
+    }
+    .service-card {
+        padding: 30px 24px;
+    }
+    .service-icon {
+        margin-bottom: 24px;
+    }
+    .service-card a {
+        min-height: 44px;
+    }
+    .featured-heading {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .property-filters {
+        margin-top: 20px;
+        gap: 30px;
+    }
+    .property-image {
+        height: 350px;
+    }
+    .property-info {
+        width: 77%;
+        padding: 18px;
+    }
+    .property-info h3, .property-info strong {
+        font-size: 14px;
+    }
+    .property-info p {
+        font-size: 11px;
+    }
+    .property-info a {
+        width: 56px;
+        height: 44px;
+    }
+    .section-action {
+        margin-top: 30px;
+    }
+    .neighborhood-layout {
+        min-height: 260px;
+        padding-left: 0;
+        justify-content: center;
+    }
+    .listing-preview {
+        gap: 12px;
+        padding: 12px;
+    }
+    .listing-thumbnail {
+        width: 70px;
+        height: 75px;
+    }
+    .listing-preview strong {
+        font-size: 21px;
+    }
+    .unit-badge {
+        width: 70px;
+        height: 70px;
+        bottom: -30px;
+        left: 0;
+    }
+    .unit-badge small {
+        font-size: 10px;
+    }
+    .testimonials {
+        padding-top: 80px;
+    }
+    .testimonial-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+        padding: 0 12px 58px;
+    }
+    .testimonial-portrait {
+        height: 290px;
+        max-width: 300px;
+        width: calc(100% - 20px);
+        margin-inline: auto;
+    }
+    .testimonial-copy {
+        padding-inline: 8px;
+    }
+    .testimonial-copy blockquote {
+        font-size: 14px;
+    }
+    .round-button {
+        top: auto;
+        bottom: 0;
+    }
+    .previous {
+        left: calc(50% - 52px);
+    }
+    .next {
+        right: calc(50% - 52px);
+    }
+    .project-card {
+        padding: 28px 20px;
+    }
+    .project-card h3 {
+        font-size: 16px;
+    }
+    .project-card .button {
+        min-height: 44px;
+    }
+    .subscribe-form {
+        flex-wrap: wrap;
+        padding: 12px;
+        gap: 8px;
+        margin-top: 30px;
+    }
+    .subscribe-form input {
+        width: calc(100% - 32px);
+    }
+    .subscribe-form .button {
+        width: 100%;
+    }
+    .subscribe-form .form-note {
+        position: static;
+    }
+    .blog-image {
+        height: 230px;
+    }
+    .blog-content {
+        padding: 22px;
+    }
+    .blog-content h3 {
+        font-size: 16px;
+    }
+    .blog-meta {
+        font-size: 11px;
+    }
+    .contact .section-heading {
+        margin-bottom: 35px;
+    }
+    .contact-eyebrow {
+        font-size: 15px;
+    }
+    .contact-layout {
+        gap: 35px;
+    }
+    .contact-media {
+        height: 260px;
+        margin-top: 45px;
+    }
+    .contact-form {
+        padding: 26px 22px;
+    }
+    .contact-form h3 {
+        font-size: 28px;
+    }
+    /* 16px input text prevents automatic focus zoom in mobile Safari. */
+    .contact-form input, .contact-form textarea, .subscribe-form input, .footer-subscribe input {
+        font-size: 16px;
+    }
+    .site-footer {
+        padding: 50px 0 30px;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 25px;
+    }
+    .footer-brand {
+        grid-column: span 2;
+    }
+    .footer-brand p {
+        max-width: 290px;
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    .footer-links a {
+        min-height: 30px;
+    }
+    .footer-office {
+        display: block;
+        grid-column: span 2;
+    }
+    .footer-office address {
+        margin-bottom: 30px;
+    }
+    .footer-office h3 {
+        margin-bottom: 18px;
+    }
+    .footer-subscribe .form-note {
+        position: static;
+    }
+    .footer-subscribe {
+        flex-wrap: wrap;
+    }
+    .footer-subscribe input {
+        width: calc(100% - 44px);
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: start;
+        padding-top: 45px;
+        gap: 20px;
+    }
+    .footer-bottom > a {
+        font-size: 16px;
+    }
+}
+
+/* Honor the operating system's motion preference. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        transition: none !important;
+    }
+}
