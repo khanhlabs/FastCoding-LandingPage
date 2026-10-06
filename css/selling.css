@@ -1,0 +1,78 @@
+/* =========================
+   SELLING
+========================= */
+.selling {
+    padding-top: 35px;
+}
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+.eyebrow .icon {
+    width: 15px;
+    height: 15px;
+    color: var(--accent);
+}
+.selling-list {
+    display: grid;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 12px;
+}
+.selling-list li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+.selling-list li::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    background: var(--accent);
+}
+.mini-houses {
+    display: flex;
+    align-items: end;
+    margin-top: 45px;
+}
+.mini-houses span {
+    width: 80px;
+    height: 55px;
+    padding: 5px;
+    background: #9c9c9c;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 8px;
+}
+.mini-houses span:first-child {
+    height: 75px;
+}
+.mini-houses span:nth-child(2) {
+    height: 65px;
+}
+.mini-houses i {
+    width: 30px;
+    height: 1px;
+    background: var(--accent);
+    margin: 0 10px 20px;
+}
+.mini-houses small {
+    white-space: nowrap;
+    font-size: 10px;
+    margin-bottom: 12px;
+    color: var(--muted);
+}
+.selling-gallery {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 14px;
+    height: 425px;
+}
+.selling-gallery > :first-child {
+    grid-row: span 2;
+}

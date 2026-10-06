@@ -1,0 +1,157 @@
+/* =========================
+   HEADER
+========================= */
+
+.top-bar {
+    height: 40px;
+    background-color: var(--ink);
+    color: #fff;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.contact-info,
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 13px;
+    letter-spacing: 0.7px;
+}
+
+.contact-info span svg {
+    width: 15px;
+    height: 15px;
+    color: #ff5927;
+    flex-shrink: 0;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+}
+
+.social-links a svg {
+    display: block;
+    width: 15px;
+    height: 15px;
+    color: #fbfbfb;
+    flex-shrink: 0;
+}
+
+.social-links .twitter svg {
+    color: #ff5927;
+}
+
+.nav-bar {
+    height: 75px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo span img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 2.6vw, 38px);
+}
+
+.nav-links a {
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1.2px;
+    background-color: #ff5927;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links a:hover {
+    color: #ff5927;
+}
+
+.nav-links .active {
+    color: #ff5927;
+    text-decoration: underline;
+    text-decoration-thickness: 1.2px;
+    text-underline-offset: 4px;
+}
+
+.signup-btn {
+    padding: 10px 24px;
+    background-color: var(--accent);
+    color: #ffffff !important;
+    font-size: 14px !important;
+    border-radius: 8px;
+}
+
+/* CSS-only mobile menu. The checkbox retains native keyboard support. */
+.menu-checkbox {
+    display: none;
+}
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+.menu-checkbox:focus-visible + .menu-toggle {
+    outline: 3px solid var(--accent);
+    outline-offset: 5px;
+}
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--ink);
+}
+
+.signup-btn:hover {
+    background: var(--accent-hover);
+}

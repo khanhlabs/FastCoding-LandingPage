@@ -1,0 +1,78 @@
+/* =========================
+   NEIGHBORHOOD
+========================= */
+.neighborhood {
+    background: var(--placeholder);
+}
+.neighborhood-layout {
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    padding-left: 20%;
+}
+.listing-preview {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    border-radius: 16px;
+    padding: 16px;
+    background: #fff;
+}
+.listing-thumbnail {
+    width: 85px;
+    height: 85px;
+    border-radius: 7px;
+    background: #a7a7a7;
+    flex-shrink: 0;
+}
+.listing-preview strong {
+    font-size: 23px;
+    line-height: 1.2;
+}
+.listing-preview p {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 4px 0;
+}
+.listing-details {
+    display: flex;
+    gap: 10px;
+    font-size: 10px;
+    color: var(--muted);
+}
+.listing-details span {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.listing-details .icon {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    color: var(--accent);
+    background: #ffe9e4;
+    border-radius: 50%;
+}
+.unit-badge {
+    position: absolute;
+    left: 5%;
+    bottom: -38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+}
+.unit-badge small {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.unit-badge strong {
+    font-size: 24px;
+    line-height: 1;
+}

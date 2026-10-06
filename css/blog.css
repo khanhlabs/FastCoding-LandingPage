@@ -1,0 +1,62 @@
+/* =========================
+   BLOG
+========================= */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+.blog-card {
+    min-width: 0;
+    box-shadow: var(--shadow);
+}
+.blog-image {
+    height: 215px;
+}
+.blog-content {
+    padding: 24px 18px;
+}
+.blog-content h3 {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.blog-content a:hover {
+    color: var(--accent);
+}
+.blog-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--accent);
+    font-size: 12px;
+}
+.blog-category .icon {
+    color: #8e8e8e;
+    width: 13px;
+    height: 13px;
+}
+.blog-content > p {
+    color: #7c7c7c;
+    font-size: 13px;
+    margin: 15px 0 20px;
+}
+.blog-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+    color: #777;
+}
+.blog-meta > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.blog-meta .icon {
+    width: 12px;
+    height: 12px;
+}
+.blog-meta a {
+    color: var(--accent);
+}
