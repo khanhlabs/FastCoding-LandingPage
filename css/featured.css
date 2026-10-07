@@ -47,6 +47,7 @@
     width: 77%;
     padding: 17px 17px 14px;
     background: #fff;
+    color: var(--ink);
 }
 .property-info h3 {
     font-size: 14px;
@@ -67,6 +68,8 @@
 .property-info strong {
     font-size: 14px;
     font-weight: 500;
+    color: var(--ink);
+    transition: color 0.25s ease-in-out;
 }
 .property-info a {
     position: absolute;
@@ -78,12 +81,15 @@
     height: 36px;
     background: #c4c4c4;
     color: #5b5b5b;
-    transition: background 180ms, color 180ms;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
-.property-card:first-child .property-info strong {
+/* All cards start neutral; highlight the price when browsing a card. */
+.property-card:hover .property-info strong,
+.property-card:focus-within .property-info strong {
     color: var(--accent);
 }
-.property-card:first-child .property-info a, .property-info a:hover {
+.property-info a:hover,
+.property-info a:focus-visible {
     color: #fff;
     background: var(--accent);
 }

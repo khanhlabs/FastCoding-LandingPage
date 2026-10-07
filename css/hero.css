@@ -29,6 +29,16 @@
     color: var(--muted);
     margin: 30px 0 24px;
 }
+/* A subtle lift for the membership CTA without shifting the surrounding layout. */
+.hero-copy .button {
+    box-shadow: 0 4px 10px rgb(11 32 36 / 15%);
+    transition: background 0.2s, color 0.2s, border-color 0.2s,
+        transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.hero-copy .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgb(11 32 36 / 14%);
+}
 .hero-doodle {
     position: absolute;
     color: var(--accent);

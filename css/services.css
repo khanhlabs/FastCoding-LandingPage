@@ -23,6 +23,13 @@
     background: #fff;
     border-radius: 10px;
     padding: 38px 28px 30px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+/* Match the guide cards' lift and support focus on the Learn more link. */
+.service-card:hover,
+.service-card:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgb(11 32 36 / 8%);
 }
 .service-icon {
     display: grid;
@@ -54,6 +61,7 @@
     align-items: center;
     gap: 12px;
     font-size: 13px;
+    font-weight: 600;
     margin-top: auto;
     min-height: 30px;
 }

@@ -18,6 +18,13 @@
     background: #8e8e8e;
     color: #fff;
     text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.project-card:hover,
+.project-card:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgb(11 32 36 / 10%);
 }
 .project-card h3 {
     font-size: 15px;
@@ -27,6 +34,12 @@
     min-height: 38px;
     padding: 8px 20px;
     font-size: 11px;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+.project-card .button:hover,
+.project-card .button:focus-visible {
+    background: var(--accent);
+    color: #fff;
 }
 .subscribe-form {
     position: relative;
@@ -50,6 +63,9 @@
     background: transparent;
     padding: 10px 0;
     font-size: 13px;
+}
+.subscribe-form input:focus {
+    outline: none;
 }
 .subscribe-form .button {
     flex-shrink: 0;

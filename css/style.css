@@ -1,13 +1,14 @@
 /* Theme values used throughout the Figma layout. */
 :root {
     --accent: #ff5638;
-    --accent-hover: #df3d24;
+    --accent-hover: #e64b33;
     --ink: #0b2024;
     --muted: #71818d;
     --surface: #f2f5f6;
     --placeholder: #c4c4c4;
     --footer: #191c2b;
     --shadow: 0 15px 35px rgb(11 32 36 / 7%);
+    --header-height: 115px;
 }
 
 /* =========================
@@ -38,7 +39,7 @@ a {
 
 .container {
     width: calc(100% - 48px);
-    max-width: 1120px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -90,8 +91,9 @@ ul {
     outline: 3px solid var(--accent);
     outline-offset: 5px;
 }
-section[id], main[id] {
-    scroll-margin-top: 24px;
+section[id], main[id], .section-heading h2[id] {
+    /* Leave room for the sticky header when following section links. */
+    scroll-margin-top: calc(var(--header-height) + 24px);
 }
 
 .sr-only {

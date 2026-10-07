@@ -62,6 +62,11 @@
 
 /* Tablet: show an expandable menu and two-column service cards. */
 @media (max-width: 900px) {
+    /* Keep the expanded menu reachable on short landscape screens. */
+    body > header {
+        max-height: 100svh;
+        overflow-y: auto;
+    }
     .section {
         padding: 65px 0;
     }
@@ -233,6 +238,9 @@
 
 /* Phones: stack content in reading order and keep touch targets comfortable. */
 @media (max-width: 600px) {
+    :root {
+        --header-height: 108px;
+    }
     .container {
         width: calc(100% - 36px);
     }
@@ -620,5 +628,31 @@
     }
     *, *::before, *::after {
         transition: none !important;
+    }
+    /* Keep the requested hover effects; fade guide colors to avoid abrupt changes. */
+    .hero-copy .button,
+    .service-card,
+    .project-card,
+    .blog-card {
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+    }
+    .guide-card {
+        transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out,
+            transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out !important;
+    }
+    .guide-card .guide-icon {
+        transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out !important;
+    }
+    .guide-card p {
+        transition: color 0.25s ease-in-out !important;
+    }
+    .property-info strong {
+        transition: color 0.25s ease-in-out !important;
+    }
+    .property-info a {
+        transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out !important;
+    }
+    .project-card .button {
+        transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out !important;
     }
 }

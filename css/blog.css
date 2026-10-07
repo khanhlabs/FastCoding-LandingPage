@@ -8,6 +8,13 @@
 }
 .blog-card {
     min-width: 0;
+    box-shadow: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+/* Keep the default card flat and lift it when its content is hovered or focused. */
+.blog-card:hover,
+.blog-card:focus-within {
+    transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
 .blog-image {
